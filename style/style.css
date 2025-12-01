@@ -13,7 +13,7 @@ main{
     justify-content: center;
 }
 
-.quartos-cadastrados{
+section.quartos-cadastrados{
     display: grid;
     grid-template: repeat(3, 1fr)/repeat(3, 1fr);
     
@@ -58,6 +58,30 @@ main{
         .btn:a{
             content: "Ck";
         }
+    }
+}
+
+section.modal{
+    background-color: white;
+    position: absolute;
+    top: 20vh;
+    padding: 10px;
+    width: 300px;
+    height: 200px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    input{
+        display: block;
+        width: 250px;
+        height: 20px;
+        margin: 2px;
+    }
+    input[type="number"], input[type="date"]{
+        width: 100px;
+    }
+    .org{
+        display: inline-block;
     }
 }
 

@@ -37,6 +37,26 @@
                 <button class="btn btn-checkIn">CHECK-IN</button>
             </div>
         </section>
+
+        <section class="modal" >
+            <form action="#" class="novo-hospede" autocomplete="off">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" autocomplete="off" autofocus required>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf" required>
+
+                <div class="org">
+                    <label for="nquarto">Nº Quarto</label>
+                    <input type="number" name="nquarto" id="nquarto" disabled>
+                </div>
+                <div class="org">
+                    <label for="checkin">Check-In</label>
+                    <input type="date" name="checkin" id="checkin">
+                </div>
+                <input type="submit" value="cadastrar">
+            </form>
+        </section>
     </main>
 </body>
 <script src="api/main.js"></script>
