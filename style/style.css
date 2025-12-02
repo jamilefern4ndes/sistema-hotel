@@ -43,20 +43,12 @@ section.quartos-cadastrados{
         .btn{
             background-color: darkred;
         }
-        .btn::content{
-            content: "Co";
-        }
     }
-    .livre{
+    .vago{
         color: darkgreen;
         background-color: rgba(25, 189, 0, 0.333); 
-        
-        .btn-checkIn{
+        .btn{
             background-color: darkgreen;
-            content: "CHECK-IN";
-        }
-        .btn:a{
-            content: "Ck";
         }
     }
 }

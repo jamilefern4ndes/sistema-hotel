@@ -12,33 +12,10 @@
     </header>
     <main>
         <section class="quartos-cadastrados">
-            <div class="quarto q01">
-                <p>Quarto 01</p>
-                <button class="btn btn-checkIn">CHECK-IN</button>
-            </div>
-            <div class="quarto q01">
-                <p>Quarto 02</p>
-                <button class="btn btn-checkIn">CHECK-IN</button>
-            </div>
-            <div class="quarto q03">
-                <p>Quarto 03</p>
-                <button class="btn btn-checkIn">CHECK-IN</button>
-            </div>
-            <div class="quarto q04">
-                <p>Quarto 04</p>
-                <button class="btn btn-checkIn">CHECK-IN</button>
-            </div>
-            <div class="quarto q05">
-                <p>Quarto 05</p>
-                <button class="btn btn-checkIn">CHECK-IN</button>
-            </div>
-            <div class="quarto q05">
-                <p>Quarto 06</p>
-                <button class="btn btn-checkIn">CHECK-IN</button>
-            </div>
+            
         </section>
 
-        <section class="modal" >
+        <section class="modal modal-novo-hospede" >
             <form action="#" class="novo-hospede" autocomplete="off">
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" autocomplete="off" autofocus required>
@@ -57,7 +34,23 @@
                 <input type="submit" value="cadastrar">
             </form>
         </section>
+        <section class="modal modal-ver-hospede" >
+            <form action="#" class="ver-hospede" autocomplete="off">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" autocomplete="off" disabled>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf" disabled>
+
+                <label for="nquarto">Nº Quarto</label>
+                <input type="number" name="nquarto" id="nquarto" disabled>
+
+                <label for="checkin">Check-In</label>
+                <input type="date" name="checkin" id="checkin" disabled>
+                <input type="submit" value="Fazer Check-Out">
+            </form>
+        </section>
     </main>
 </body>
-<script src="api/main.js"></script>
+<script type="module" src="js/main.js"></script>
 </html>
