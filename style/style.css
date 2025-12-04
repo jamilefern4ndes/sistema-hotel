@@ -52,7 +52,11 @@ section.quartos-cadastrados{
         }
     }
 }
-
+.settings{
+    input{
+        width: 70px;
+    }
+}
 section.modal{
     background-color: white;
     position: absolute;
@@ -61,20 +65,19 @@ section.modal{
     width: 300px;
     height: 200px;
     display: none;
-    align-items: center;
-    justify-content: center;
     input{
         display: block;
-        width: 250px;
-        height: 20px;
-        margin: 2px;
     }
-    input[type="number"], input[type="date"]{
-        width: 100px;
+    input[type="submit"]{
+        background-color: aquamarine;
+        border: 1px solid gray;
+        margin-top: 10px;
     }
-    .org{
-        display: inline-block;
+
+    form.check-in{
+        display: none;
     }
+
 }
 
 

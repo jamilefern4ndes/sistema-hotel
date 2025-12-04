@@ -11,43 +11,22 @@
         <h1>Sistema Hotel</h1>
     </header>
     <main>
-        <section class="quartos-cadastrados">
-            
-        </section>
 
-        <section class="modal modal-novo-hospede" >
-            <form action="#" class="novo-hospede" autocomplete="off">
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome" autocomplete="off" autofocus required>
+        <form action="#" class="settings">
+            <label for="quantidadeQuartos">Quantos quartos:</label>
+            <input type="number" name="quantidadeQuartos" id="quantidadeQuartos" min="0" max="100" value="0">
+        </form>
 
-                <label for="cpf">CPF:</label>
-                <input type="text" name="cpf" id="cpf" required>
+        <section class="quartos-cadastrados"></section>
+        
+        <section class="modal"> 
+            <form action="#" class="check-in">
+                <input type="text" name="nome" id="nome" placeholder="nome">
+                <input type="text" name="cpf" id="cpf" placeholder="cpf">
+                <input type="number" name="numeroquarto" id="numeroQuarto" placeholder="Nº">
+                <input type="date" name="checkIn" id="checkIn" placeholder="--/--/----">
 
-                <div class="org">
-                    <label for="nquarto">Nº Quarto</label>
-                    <input type="number" name="nquarto" id="nquarto" disabled>
-                </div>
-                <div class="org">
-                    <label for="checkin">Check-In</label>
-                    <input type="date" name="checkin" id="checkin">
-                </div>
-                <input type="submit" value="cadastrar">
-            </form>
-        </section>
-        <section class="modal modal-ver-hospede" >
-            <form action="#" class="ver-hospede" autocomplete="off">
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome" autocomplete="off" disabled>
-
-                <label for="cpf">CPF:</label>
-                <input type="text" name="cpf" id="cpf" disabled>
-
-                <label for="nquarto">Nº Quarto</label>
-                <input type="number" name="nquarto" id="nquarto" disabled>
-
-                <label for="checkin">Check-In</label>
-                <input type="date" name="checkin" id="checkin" disabled>
-                <input type="submit" value="Fazer Check-Out">
+                <input type="submit" value="CHECK-IN">
             </form>
         </section>
     </main>
