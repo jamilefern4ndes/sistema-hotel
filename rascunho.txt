@@ -1,18 +1,29 @@
-RASCUNHO DO SISTEMA PARA HOTÉIS
-> Funcionalizades:
-    -registrar entrada e saída dos hóspedes, bem como suas informações pessoais (nome, idade, endereço, cpf e data de ocupação)
-    -os dados serão persistentes no navegador e ficarão disponíveis p consulta da equipe profissional
-    -visualização de quartos disponíveis com cores distintas para identificar os vagos dos ocupados. 
+sistema-hotel/
+│
 
-> Front-end:
-    - terá um menu fixo com as opções: início e registros antigos
-    - no corpo da página inicial, colocarei os quartos e a distinção entre eles
-    - nas divisórias para identificar cada quarto terá os botões para chekin (vagos) e chekout (ocupados)
-
->Primeiro contato:
-    - sistema abrirá com as opções de cadastro onde será informado
-        *quantidade de quartos naquele estabelecimento;
-        *número de cada quarto;
-
->Design:
-    -em processo de criação
+├── src/
+│   ├── main.js
+│   │
+│   ├── models/
+│   │   ├── Hospede.js
+│   │   ├── Quarto.js
+│   │   └── Reserva.js
+│   │
+│   ├── controllers/
+│   │   ├── HospedeController.js
+│   │   ├── QuartoController.js
+│   │   └── ReservaController.js
+│   │
+│   ├── views/
+│   │   ├── HospedeView.js
+│   │   ├── QuartoView.js
+│   │   └── ReservaView.js
+│   │
+│   ├── services/
+│   │   ├── StorageService.js
+│   │   └── Utils.js
+│   │
+│   └── database/
+│       └── fake-db.js
+│
+└── package.json

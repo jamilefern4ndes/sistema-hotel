@@ -1,0 +1,14 @@
+import { HospedeController } from "./controllers/HospedeController.js";
+import { QuartoController } from "./controllers/QuartoController.js";
+
+// quantidade de quartos
+const inputQuartos = document.querySelector('#quantidadeQuartos');
+const controladorQuartos = new QuartoController();
+
+inputQuartos.addEventListener("change", (e) => controladorQuartos.add(e));
+
+// cadastro de hóspede
+const formulario = document.querySelector(".check-in");
+const controladorHospede = new HospedeController();
+
+formulario.addEventListener("submit", (e) => controladorHospede.add(e));
