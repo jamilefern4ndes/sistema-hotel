@@ -3,22 +3,21 @@ export class Quartos {
         this._quantidade = parseInt(quantidade)
         this._lista = []
 
-        //configurar aparência dos quartos depois
-        this._quartos = Array.from({ length: valor }, (_, i) => ({
-            n: i + 1,
-            situacao: "vago"
+        this._quartos = Array.from({ length: quantidade }, (_, i) => ({
+            situacao: "vago",
+            acao_disponivel: "CHECK-IN"
         }))
     }
 
     criarQuartos() {
-
         for (let i = 0; i < this._quantidade; i++) {
-            const div = document.createElement("div")
-            div.classList.add("quarto");
-            div.textContent = `Quarto ${i + 1}`
-            this._lista.push(div)
-        }
+            const quarto = document.createElement("div")
+            quarto.classList.add("quarto", this._quartos[i].situacao);
 
+            quarto.textContent = `Quarto ${i + 1}`
+            this._lista.push(quarto)
+        }
         return this._lista
     }
+
 }

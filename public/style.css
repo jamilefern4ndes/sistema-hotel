@@ -54,10 +54,44 @@ section.quartos-cadastrados{
     }
 }
 .settings{
-    input{
-        width: 70px;
+    position: absolute;
+    top: 20%;
+    background-color: white;
+    width: 90vw; height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    form{
+        width: 40%;
+        text-align: center;
+        font-size: 1.2em;
+    }
+    button{
+        width: 20%;
+        background-color: blueviolet;
+        color: white;
+        border: none;
+        padding: 5px 2px;
+        border-radius: 8px;
+    }
+    button:active{
+        transform: scale(1.02);
+    }
+    input[type=number]{
+        width: 50%;
+        display: block;
+        text-align: center;
+        margin: 4px auto;
+        border: none;
+        border-bottom: 1px solid;
+    }
+    input:focus{
+        outline: none;
     }
 }
+
 section.modal{
     background-color: white;
     position: absolute;

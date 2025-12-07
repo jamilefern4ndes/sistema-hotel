@@ -7,10 +7,10 @@ export class QuartoController {
         this.view = new QuartosView(document.querySelector(".quartos-cadastrados"));
     }
 
-    add(e) {
+    add(e,) {
         e.preventDefault();
 
-        const quantidade = e.target.value;
+        const quantidade = e.target.value
         const quartosModel = new Quartos(quantidade);
 
         const lista = quartosModel.criarQuartos(); // ← pega os DIVs criados

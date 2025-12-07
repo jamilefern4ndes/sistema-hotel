@@ -11,12 +11,15 @@
         <h1>Sistema Hotel</h1>
     </header>
     <main>
-
-        <form action="#" class="settings">
-            <label for="quantidadeQuartos">Quantos quartos:</label>
+        <div class="settings">
+              <form action="#" >
+            <label for="quantidadeQuartos">Quantos quartos têm <br> seu estabelecimento?</label>
             <input type="number" name="quantidadeQuartos" id="quantidadeQuartos" min="0" max="100" value="0">
         </form>
-
+            <button id="btnConfirmar">Confirmar</button>
+        </div>
+      
+        
         <section class="quartos-cadastrados"></section>
         
         <section class="modal"> 
