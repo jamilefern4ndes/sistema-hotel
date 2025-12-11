@@ -1,14 +1,14 @@
 export class QuartosView {
 
     constructor(container) {
-        this.container = container; // container do DOM onde os quartos vão aparecer
+        this.container = container
     }
 
     update(listaDeQuartos) {
-        this.container.innerHTML = ""; // limpa antes de renderizar
+        this.container.innerHTML = ""
 
         listaDeQuartos.forEach(quarto => {
-            this.container.appendChild(quarto);
-        });
+            this.container.appendChild(quarto)
+        })
     }
 }
