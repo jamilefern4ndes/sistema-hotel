@@ -1,18 +1,16 @@
-import { HospedeController } from "./controllers/HospedeController.js"
-import { QuartoController } from "./controllers/QuartoController.js"
+import { HotelController } from './controllers/HotelController.js'
 
-// quantidade de quartos
+const hotelControlador = new HotelController()
+
+const modalSettings = document.querySelector('.settings') 
 const inputQuartos = document.querySelector('#quantidadeQuartos')
-const controladorQuartos = new QuartoController()
+const btnCriaQuartos = document.querySelector("#btnConfirmar")
 
-inputQuartos.addEventListener("change", (e) => controladorQuartos.add(e))
-inputQuartos.addEventListener("input", (e) => controladorQuartos.add(e))
+btnCriaQuartos.addEventListener("click", (e) => {
+    e.preventDefault()
 
-// cadastro de hóspede
-const formulario = document.querySelector(".check-in")
-const controladorHospede = new HospedeController()
+    const numQuartos = inputQuartos.value
+    hotelControlador.add(numQuartos, document.querySelector('.quartos-container'), document.querySelector('.form-container'))
+    modalSettings.style.display = 'none'
+})
 
-formulario.addEventListener("submit", (e) => controladorHospede.add(e))
-
-// ocutar form inicial
-document.querySelector('#btnConfirmar').addEventListener("click", ()=>(document.querySelector(".settings").style.display = 'none'))

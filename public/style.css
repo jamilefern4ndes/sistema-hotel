@@ -14,7 +14,7 @@ main{
     flex-direction: column;
 }
 
-section.quartos-cadastrados{
+section.quartos-container{
     display: grid;
     grid-template: repeat(3, 1fr)/repeat(3, 1fr);
     
@@ -92,30 +92,53 @@ section.quartos-cadastrados{
     }
 }
 
-section.modal{
-    background-color: white;
+section.form-container{
+    background-color: rgb(255, 255, 255);
     position: absolute;
-    top: 20vh;
+    top: 12vh;
     padding: 10px;
-    width: 300px;
-    height: 200px;
+    width: 95vw;
+    height: 80vh;
     display: none;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    animation: exibir 0.2s ease-in;
+    
     input{
         display: block;
+        padding: 4px;
+        font-size: 1.02em;
+        text-transform: capitalize;
     }
-    input[type="submit"]{
-        background-color: aquamarine;
-        border: 1px solid gray;
-        margin-top: 10px;
+    label{
+        font-size: 0.8em;
+    }
+    button[type="submit"]{
+        background-color: rgba(25, 189, 0, 0.333);
+        color: darkgreen;
+        border: none;
+        border-radius: 10px;
+        margin-top: 5px;
+        display: block;
+        margin: 10px auto;
+        padding: 6px;
+        width: 100%;
     }
 
-    form.check-in{
-        display: none;
-    }
+    
 
 }
 
 
-
+@keyframes exibir{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 

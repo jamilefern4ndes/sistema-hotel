@@ -14,24 +14,13 @@
         <div class="settings">
               <form action="#" >
             <label for="quantidadeQuartos">Quantos quartos têm <br> seu estabelecimento?</label>
-            <input type="number" name="quantidadeQuartos" id="quantidadeQuartos" min="0" max="100" value="0">
+            <input type="number" name="quantidadeQuartos" id="quantidadeQuartos" min="0" max="100" autofocus autocomplete="off">
         </form>
             <button id="btnConfirmar">Confirmar</button>
         </div>
       
-        
-        <section class="quartos-cadastrados"></section>
-        
-        <section class="modal"> 
-            <form action="#" class="check-in">
-                <input type="text" name="nome" id="nome" placeholder="nome">
-                <input type="text" name="cpf" id="cpf" placeholder="cpf">
-                <input type="number" name="numeroquarto" id="numeroQuarto" placeholder="Nº">
-                <input type="date" name="checkIn" id="checkIn" placeholder="--/--/----">
-
-                <input type="submit" value="CHECK-IN">
-            </form>
-        </section>
+        <section class="quartos-container"></section>
+        <section class="form-container"></section>
     </main>
 </body>
 <script type="module" src="../src/main.js"></script>
