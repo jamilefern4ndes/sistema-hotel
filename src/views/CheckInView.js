@@ -1,15 +1,14 @@
 // views/CheckInView.js
 export class CheckInView {
-    constructor(container, onSubmit) { 
+    constructor(container, onSubmit) {
         this._container = container;
-        this._onSubmit = onSubmit; 
+        this._onSubmit = onSubmit;
         this.render();
 
-        this.nome = this._container.querySelector("#nome")
-        this.documento = this._container.querySelector("#documento")
-        this.telefone = this._container.querySelector("#telefone")
-        this.numeroQuarto = this._container.querySelector("#numero-quarto")
-        
+        this.nome = this._container.querySelector("#nome");
+        this.documento = this._container.querySelector("#documento");
+        this.telefone = this._container.querySelector("#telefone");
+        this.numeroQuarto = this._container.querySelector("#numero-quarto");
     }
 
     render() {
@@ -17,7 +16,7 @@ export class CheckInView {
             <h3>Check-in</h3>
             <form id="form-checkin" autocomplete="off">
                 <label>Nome:</label>
-                <input type="text" id="nome" required / autofocus autocomplete="off">
+                <input type="text" id="nome" required autofocus autocomplete="off">
 
                 <label>Documento:</label>
                 <input type="text" id="documento" required />
@@ -36,16 +35,12 @@ export class CheckInView {
         form.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            const nome = this.nome.value;
-            const documento = this.documento.value;
-            const telefone = this.telefone.value
-            const numeroQuarto = this.numeroQuarto.value
-
             this._onSubmit({
-                nome,
-                documento,
-                telefone,
-                numeroQuarto
+                nome: this.nome.value,
+                documento: this.documento.value,
+                telefone: this.telefone.value,
+                numeroQuarto: this.numeroQuarto.value,
+                checkinDate: new Date().toLocaleDateString("pt-BR") // gera data automática
             });
         });
     }
@@ -57,15 +52,15 @@ export class CheckInView {
             if (q.situacao === "vago") {
                 const option = document.createElement("option");
                 option.value = q.numero;
-                option.textContent = `${q.numero} - ${q.situacao}`
-                select.appendChild(option)
+                option.textContent = `${q.numero} - ${q.situacao}`;
+                select.appendChild(option);
             }
-        })
+        });
     }
 
-    _limpar(){
-        this.nome.value  = ''
-        this.documento.value = ''
-        this.telefone.value = ''
+    _limpar() {
+        this.nome.value = "";
+        this.documento.value = "";
+        this.telefone.value = "";
     }
 }
